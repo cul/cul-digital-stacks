@@ -1,0 +1,14 @@
+<html>
+<body>
+<script>
+    const searchParams = new URLSearchParams(window.location.search);
+    window.parent.postMessage(
+      {
+        "accessToken": "EXTERNAL",
+        "expiresIn": 3600
+      },
+      searchParams.get("origin")
+    );
+</script>
+</body>
+</html>

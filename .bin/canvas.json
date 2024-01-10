@@ -1,0 +1,78 @@
+{
+  "id": "$BASE_URL/$OUTPUT_DIR/$PATH.json",
+  "type": "Manifest",
+  "label": "$FILE_NAME",
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "partOf": [
+    {
+      "id": "$BASE_URL/$OUTPUT_DIR/$PARENT_PATH/collection.json",
+      "type": "Collection"
+    }
+  ],
+  "thumbnail": {
+    "id": "$BASE_URL/assets/file-icon/pdf.svg",
+    "format": "image/svg+xml"
+  },
+  "metadata": [
+    {
+      "label": {
+        "en": [
+          "File size"
+        ]
+      },
+      "value": "7.4 MB"
+    },
+    {
+      "label": {
+        "en": [
+          "Modification date"
+        ]
+      },
+      "value": "2017-09-29"
+    }
+  ],
+  "items": [
+    {
+      "id": "$BASE_URL/$PATH/canvas",
+      "type": "Canvas",
+      "width": 1,
+      "height": 1,
+      "items": [
+        {
+          "id": "$BASE_URL/$PATH/annotationPage",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "$BASE_URL/$PATH/annotation",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "$BASE_URL/$PATH",
+                "type": "foaf:Document",
+                "format": "application/pdf",
+                "service": [
+                  {
+                    "@context": "http://iiif.io/api/auth/1/context.json",
+                    "@id": "$BASE_URL/login",
+                    "profile": "http://iiif.io/api/auth/1/login",
+                    "label": "This material requires authorization",
+                    "header": "This material requires authorization",
+                    "description": "This material requires a Columbia CAS login",
+                    "service": [
+                        {
+                            "@context": "http://iiif.io/api/auth/1/context.json",
+                            "@id": "$BASE_URL/token",
+                            "profile": "http://iiif.io/api/auth/1/token"
+                        }
+                    ]
+                  }
+                ]
+              },
+              "target": "$BASE_URL/$PATH/canvas"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

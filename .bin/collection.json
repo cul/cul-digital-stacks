@@ -1,0 +1,14 @@
+{
+  "id": "$BASE_URL/$OUTPUT_DIR/",
+  "type": "Collection",
+  "label": "$FILE_NAME",
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "partOf": [
+    {
+      "id": "$BASE_URL/$OUTPUT_DIR/",
+      "type": "Collection"
+    }
+  ],
+  "items": [
+  ]
+}
